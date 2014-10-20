@@ -1,0 +1,29 @@
+<%= form_tag keys_find_path, {id: "findkey", method: 'get'} do %>
+  <span class="capturing">
+    <p>
+      Press a key combination in the input box, click "Find".
+    </p>
+    <input></input>
+  </span>
+  <%= submit_tag "Find" %>
+
+  <br>
+  <%= hidden_field_tag :ctrl, 'F' %>
+  CTRL
+  <%= check_box_tag :ctrl, 'T', false, {id: "key_ctrl", disabled: true} %>
+  ALT
+  <%= hidden_field_tag :alt, 'F' %>
+  <%= check_box_tag :alt, 'T', false, {id: "key_alt", disabled: true} %>
+  SHIFT
+  <%= hidden_field_tag :shift, 'F' %>
+  <%= check_box_tag :shift, 'T', false, {id: "key_shift", disabled: true} %>
+  <%= number_field_tag :code, nil, {id: "key_code", type: "hidden"} %>
+
+  Key code:
+  <span id="tip">
+  </span>
+
+<% end %>
+
+<br>
+<%= link_to 'New Key Combination', new_key_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ctrl: false
+  alt: false
+  shift: false
+  code: 1
+
+two:
+  ctrl: false
+  alt: false
+  shift: false
+  code: 1

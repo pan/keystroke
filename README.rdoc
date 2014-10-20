@@ -1,2 +1,9 @@
 == README
 
+Keyboard shortcuts and meanings.
+
+=== Usage
+
+Edit the Gemfile to use your preferred gem server.
+
+Run the bundle, migration and launch the rails server, you are ready to use it.

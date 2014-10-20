@@ -1,0 +1,9 @@
+<div>
+<% if @key %>
+  <%= combine(@key) %> = <%= @key.meaning %>
+<% else %>
+  Not found.
+<% end %>
+</div>
+
+<%= link_to "Back", root_path %>

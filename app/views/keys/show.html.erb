@@ -1,0 +1,11 @@
+<div><%= notice %></div>
+
+<%= @key.meaning %>:
+<div>
+<%= @key.ctrl ? "CTRL + " : "" %>
+<%= @key.alt ? "ALT + " : "" %>
+<%= @key.shift ? "SHIFT + " : "" %>
+<%= @key.code.chr %>
+</div>
+
+<%= link_to "Back", root_path %>

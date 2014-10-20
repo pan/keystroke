@@ -1,0 +1,21 @@
+<%= form_for @key do |f| %>
+  <% if @key.errors.any? %>
+    <ul>
+    <% @key.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :meaning %>
+  <%= f.text_field :meaning %>
+  <%= render 'keyinfo' %>
+
+  <%= f.check_box :ctrl, {hidden: true} %>
+  <%= f.check_box :alt, {hidden: true}  %>
+  <%= f.check_box :shift, {hidden: true}  %>
+  <%= f.number_field :code, {hidden: true}  %>
+
+  <%= f.submit %>
+<% end %>
+

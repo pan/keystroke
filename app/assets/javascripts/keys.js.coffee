@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
-  $(".capturing").keypress (event) ->
+  $(".capturing").keydown (event) ->
     mstr = ""
     if event.ctrlKey
       mstr = "CTRL "
@@ -20,7 +20,7 @@ $ ->
     else
       $("#key_shift").prop('checked', false)
     $("#modifier").text(mstr)
-    $("#tip").text(event.charCode)
+    $("#tip").text(event.which)
     $("#key_code").val(event.which)
 
   $("#findkey").submit ->
